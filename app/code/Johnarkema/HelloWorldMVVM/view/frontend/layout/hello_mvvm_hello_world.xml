@@ -1,7 +1,9 @@
 <?xml version="1.0"?>
 
-<page>
-    <referanceBlock>
-        <block  />
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/layout/etc/page_configuration.xsd">
+    <referanceBlock name="content">
+        <block template="content.phtml"
+               class="Johnarkema\HelloWorldMVVM\Block\Main"
+               name="Johnarkema_helloworld_mvvm" />
     </referanceBlock>
 </page>
