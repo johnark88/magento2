@@ -64,7 +64,4 @@ app/.idea
 .user.ini
 auth.json
 
-CHANGELOG.md
-composer.lock
-composer.lock
-package-lock.json
+pestle.phar

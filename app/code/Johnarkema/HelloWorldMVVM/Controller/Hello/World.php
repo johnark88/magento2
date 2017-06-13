@@ -19,7 +19,7 @@ class World extends \Magento\Framework\App\Action\Action
     {
 //         echo '<p> Did it</p>';
 //        var_dump(__METHOD__);
-        $page_object = $this -> pageFactory -> create();;
+        $page_object = $this -> pageFactory -> create();
         return $page_object;
     }// end public function execute
 
