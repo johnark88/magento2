@@ -1,5 +1,5 @@
 
 
-alert("Hello World from JS file");
+alert('Hello World from JS');
 
-console.log('Check Check 123.....')
+console.log('Check Check 123.....');
