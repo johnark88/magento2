@@ -1,7 +1,7 @@
 var config = {
     map: {
         '*': {
-            hello:      'Learning_Js'
+            hello: 'Learning_Js'
         }
     }
 };
