@@ -65,6 +65,3 @@ app/.idea
 auth.json
 
 CHANGELOG.md
-composer.lock
-composer.lock
-package-lock.json

@@ -50,5 +50,13 @@ module.exports = {
             'css/styles'
         ],
         dsl: 'less'
+    },
+    other: {
+        area: 'frontend',
+        name: 'Johnarkema/other',
+        locale: 'en_US',
+        files: [
+
+        ]
     }
 };
