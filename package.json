@@ -29,6 +29,7 @@
         "grunt-template-jasmine-requirejs": "^0.2.3",
         "grunt-text-replace": "^0.4.0",
         "imagemin-svgo": "^4.0.1",
+        "jit-grunt": "^0.10.0",
         "load-grunt-config": "^0.16.0",
         "morgan": "^1.5.0",
         "node-minify": "^1.0.1",
