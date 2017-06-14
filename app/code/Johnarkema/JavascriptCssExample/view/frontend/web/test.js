@@ -1,5 +1,2 @@
-
-
 alert('BAHHHHHH');
-
 
