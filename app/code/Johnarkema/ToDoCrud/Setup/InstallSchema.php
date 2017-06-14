@@ -23,28 +23,40 @@ class InstallSchema implements \Magento\Framework\Setup\InstallSchemaInterface
             [ 'identity' => true, 'nullable' => false, 'primary' => true, 'unsigned' => true, ],
             'Entity ID'
         )->addColumn(
-            'title',
+            'item_text',
             Table::TYPE_TEXT,
             255,
             [ 'nullable' => false, ],
+            'Text of the to do item'
+        )->addColumn(
+            'title',
+            Table::TYPE_TEXT,
+            255,
+            ['nullable' => false],
             'Demo Title'
+        )->addColumn(
+            'date_completed',
+            Table::TYPE_DATETIME,
+            null,
+            [ 'nullable' => true],
+            'Date item was completed'
         )->addColumn(
             'creation_time',
             Table::TYPE_TIMESTAMP,
             null,
-            [ 'nullable' => false, 'default' => Table::TIMESTAMP_INIT, ],
+            [ 'nullable' => true],
             'Creation Time'
         )->addColumn(
             'update_time',
             Table::TYPE_TIMESTAMP,
             null,
-            [ 'nullable' => false, 'default' => Table::TIMESTAMP_INIT_UPDATE, ],
+            [ 'nullable' => true, 'default' => '1', ],
             'Modification Time'
         )->addColumn(
             'is_active',
             Table::TYPE_SMALLINT,
             null,
-            [ 'nullable' => false, 'default' => '1', ],
+            ['nullable' => false,'default' => '1',],
             'Is Active'
         );
         $installer->getConnection()->createTable($table);
