@@ -19,4 +19,5 @@ class Index extends \Magento\Framework\App\Action\Action
     {
         return $this->resultPageFactory->create();  
     }
-}
+
+}//end class
