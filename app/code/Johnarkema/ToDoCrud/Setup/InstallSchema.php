@@ -29,12 +29,6 @@ class InstallSchema implements \Magento\Framework\Setup\InstallSchemaInterface
             [ 'nullable' => false, ],
             'Text of the to do item'
         )->addColumn(
-            'title',
-            Table::TYPE_TEXT,
-            255,
-            ['nullable' => false],
-            'Demo Title'
-        )->addColumn(
             'date_completed',
             Table::TYPE_DATETIME,
             null,
@@ -50,7 +44,7 @@ class InstallSchema implements \Magento\Framework\Setup\InstallSchemaInterface
             'update_time',
             Table::TYPE_TIMESTAMP,
             null,
-            [ 'nullable' => true, 'default' => '1', ],
+            [ 'nullable' => true],
             'Modification Time'
         )->addColumn(
             'is_active',
