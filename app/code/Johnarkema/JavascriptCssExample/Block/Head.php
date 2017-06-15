@@ -11,7 +11,7 @@ class Head extends \Magento\Framework\View\Element\Template
     public function __construct(\Magento\Framework\View\Element\Template\Context $context,
                                     \Magento\Framework\View\Asset\Repository $assetRepository, array $data =[] )
     {
-        $this -> assetRepository = $assetRepository;
+        $this -> assetRepo = $assetRepository;
         return parent::__construct($context, $data);
 
     }// end public function construct
