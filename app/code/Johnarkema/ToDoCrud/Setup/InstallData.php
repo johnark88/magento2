@@ -1,10 +1,26 @@
 <?php
 namespace Johnarkema\ToDoCrud\Setup;
-class InstallData implements \Magento\Framework\Setup\InstallDataInterface
+
+use Magento\Framework\Setup\InstallDataInterface;
+use Magento\Framework\Setup\ModuleContextInterface;
+use Magento\Framework\Setup\ModuleDataSetupInterface;
+
+
+
+class InstallData implements InstallDataInterface
 {
-    public function install(\Magento\Framework\Setup\ModuleDataSetupInterface $setup,
-                                \Magento\Framework\Setup\ModuleContextInterface $context)
+    public function install(ModuleDataSetupInterface $setup, ModuleContextInterface $context)
     {
-        //install data here
-    }
-}
+        $data =[
+            ['item_text' => 'First To Do'],
+            ['item_text' => 'Another To Do']
+        ];
+
+        foreach ($data as $bind) {
+            $setup->getConnection()
+                ->insertForce($setup->getTable('johnarkema_todocrud_todoitem'), $bind);
+        }//end for each
+
+    }//end public function
+
+}//end class

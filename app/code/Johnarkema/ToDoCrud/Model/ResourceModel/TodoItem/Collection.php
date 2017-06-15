@@ -4,6 +4,7 @@ class Collection extends \Magento\Framework\Model\ResourceModel\Db\Collection\Ab
 {
     protected function _construct()
     {
-        $this->_init('Johnarkema\ToDoCrud\Model\TodoItem','Johnarkema\ToDoCrud\Model\ResourceModel\TodoItem');
+        $this->_init('Johnarkema\ToDoCrud\Model\TodoItem',
+                        'Johnarkema\ToDoCrud\Model\ResourceModel\TodoItem');
     }
 }

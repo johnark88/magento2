@@ -1,6 +1,12 @@
 <?php
 namespace Johnarkema\ToDoCrud\Model;
-class TodoItem extends \Magento\Framework\Model\AbstractModel implements \Johnarkema\ToDoCrud\Api\Data\TodoItemInterface, \Magento\Framework\DataObject\IdentityInterface
+
+use \Magento\Framework\Model\AbtractModel;
+use \Johnarkema\ToDoCrud\Api\Data\TodoItemInterface;
+use \Magento\Framework\DataObject\IdentityInterface;
+
+
+class TodoItem extends AbstractModel implements TodoItemInterface, IdentityInterface
 {
     const CACHE_TAG = 'johnarkema_todocrud_todoitem';
 

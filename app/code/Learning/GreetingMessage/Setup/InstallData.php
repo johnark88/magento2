@@ -29,6 +29,8 @@ class InstallData implements InstallDataInterface {
             foreach ($data as $bind) {
                  $setup->getConnection()
                     ->insertForce ($setup->getTable('greetingMessage'),$bind);
-        }
-    }
-}
+        }//end for each
+
+    }//end public function
+
+}//end class
