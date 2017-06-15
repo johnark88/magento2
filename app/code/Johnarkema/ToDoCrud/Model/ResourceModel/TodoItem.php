@@ -1,5 +1,7 @@
 <?php
 namespace Johnarkema\ToDoCrud\Model\ResourceModel;
+
+
 class TodoItem extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
 {
     protected function _construct()

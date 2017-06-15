@@ -1,5 +1,7 @@
 <?php
 namespace Johnarkema\ToDoCrud\Model;
+
+
 class TodoItem extends \Magento\Framework\Model\AbstractModel implements \Johnarkema\ToDoCrud\Api\Data\TodoItemInterface, \Magento\Framework\DataObject\IdentityInterface
 {
     const CACHE_TAG = 'johnarkema_todocrud_todoitem';
