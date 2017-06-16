@@ -18,7 +18,7 @@ class UpgradeData implements UpgradeDataInterface {
     {
         $setup -> startSetup();
 
-        if ($context -> getVersion() && version_compare($context -> getVersion(), '0.1.1') < 0){
+        if ($context -> getVersion() && version_compare($context -> getVersion(), '0.1.2') < 0){
             $tableName = $setup -> getTable('johnarkema_blog_post');
 
             $data = [

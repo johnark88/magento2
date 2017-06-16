@@ -1,0 +1,10 @@
+<?php ?>
+<h1> John Posts </h1>
+<?php foreach ($block -> getPosts() as $post);?>
+
+<h2><a href="<?php echo $block -> getPostUrl($post);?>"> <?php echo $post -> getTitle();?> </a></h2>
+<p><? echo $post -> getContent(); ?></p>
+
+
+
+
