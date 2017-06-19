@@ -11,7 +11,7 @@ class InstallSchema implements InstallSchemaInterface {
 
     public function install(SchemaSetupInterface $setup, ModuleContextInterface $context)
     {
-        $setup -> statrtSetup();
+        $setup -> startSetup();
 
         $tableName = $setup -> getTable('milton_blog_post');
 
