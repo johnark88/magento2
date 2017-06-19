@@ -74,4 +74,5 @@ interface PostInterface
      * @return $this
      */
     public function setId($id);
+
 }//end interface

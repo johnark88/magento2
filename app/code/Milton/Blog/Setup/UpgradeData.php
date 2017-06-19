@@ -21,11 +21,15 @@ class UpgradeData implements UpgradeDataInterface
             $data = [
                 [
                     'title' => 'This is post 1',
-                    'content' => 'This is my content. Love it.'
+                    'content' => 'This is my content. Love it.',
                 ],
                 [
                     'title' => 'This is post 2',
-                    'content' => 'This is more content. It is great content. Love it.'
+                    'content' => 'This is more content. It is great content. Love it.',
+                ],
+                [
+                    'title' => 'This is post 3',
+                    'content' => 'This is post 3 content. It is worthy',
                 ],
             ];
 
