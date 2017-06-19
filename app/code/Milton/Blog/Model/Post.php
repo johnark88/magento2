@@ -13,7 +13,7 @@ class Post extends AbstractModel implements PostInterface, IdentityInterface
 
     protected function _construct()
     {
-        $this->_init('Milton\Blog\Model\ResourceModel\Post');
+        $this -> _init('Milton\Blog\Model\ResourceModel\Post');
     }
 
 
@@ -24,7 +24,7 @@ class Post extends AbstractModel implements PostInterface, IdentityInterface
      */
     public function getTitle()
     {
-        return $this->getData(self::TITLE);
+        return $this -> getData(self::TITLE);
     }
 
     /**
@@ -34,7 +34,7 @@ class Post extends AbstractModel implements PostInterface, IdentityInterface
      */
     public function getContent()
     {
-        return $this->getData(self::CONTENT);
+        return $this -> getData(self::CONTENT);
     }
 
     /**
@@ -44,7 +44,7 @@ class Post extends AbstractModel implements PostInterface, IdentityInterface
      */
     public function getCreatedAt()
     {
-        return $this->getData(self::CREATED_AT);
+        return $this -> getData(self::CREATED_AT);
     }
 
     /**
@@ -54,7 +54,7 @@ class Post extends AbstractModel implements PostInterface, IdentityInterface
      */
     public function getId()
     {
-        return $this->getData(self::POST_ID);
+        return $this -> getData(self::POST_ID);
     }
 
     /**
@@ -74,7 +74,7 @@ class Post extends AbstractModel implements PostInterface, IdentityInterface
      */
     public function setTitle($title)
     {
-        return $this->setData(self::TITLE, $title);
+        return $this -> setData(self::TITLE, $title);
     }
 
     /**
@@ -85,7 +85,7 @@ class Post extends AbstractModel implements PostInterface, IdentityInterface
      */
     public function setContent($content)
     {
-        return $this->setData(self::CONTENT, $content);
+        return $this -> setData(self::CONTENT, $content);
     }
 
     /**
@@ -96,7 +96,7 @@ class Post extends AbstractModel implements PostInterface, IdentityInterface
      */
     public function setCreatedAt($createdAt)
     {
-        return $this->setData(self::CREATED_AT, $createdAt);
+        return $this -> setData(self::CREATED_AT, $createdAt);
     }
 
     /**
@@ -107,7 +107,7 @@ class Post extends AbstractModel implements PostInterface, IdentityInterface
      */
     public function setId($id)
     {
-        return $this->setData(self::POST_ID, $id);
+        return $this -> setData(self::POST_ID, $id);
     }
 
 }//end class
