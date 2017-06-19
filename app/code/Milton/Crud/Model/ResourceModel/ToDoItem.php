@@ -1,6 +1,10 @@
 <?php
+
 namespace Milton\Crud\Model\ResourceModel;
-class ToDoItem extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
+
+use  \Magento\Framework\Model\ResourceModel\Db\AbstractDb;
+
+class ToDoItem extends AbstractDb
 {
     protected function _construct()
     {

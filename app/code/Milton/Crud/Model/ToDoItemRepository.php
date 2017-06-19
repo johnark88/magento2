@@ -11,7 +11,9 @@ use Magento\Framework\Exception\CouldNotSaveException;
 use Magento\Framework\Exception\NoSuchEntityException;
 use Magento\Framework\Exception\CouldNotDeleteException;
 use Magento\Framework\Api\SearchResultsInterfaceFactory;
-class ToDoItemRepository implements \Milton\Crud\Api\ToDoItemRepositoryInterface
+
+
+class ToDoItemRepository implements ToDoItemRepositoryInterface
 {
     protected $objectFactory;
     protected $collectionFactory;

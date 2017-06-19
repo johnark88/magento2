@@ -1,6 +1,13 @@
 <?php
+
 namespace Milton\Crud\Model;
-class ToDoItem extends \Magento\Framework\Model\AbstractModel implements \Milton\Crud\Api\Data\ToDoItemInterface, \Magento\Framework\DataObject\IdentityInterface
+
+use \Magento\Framework\Model\AbstractModel;
+use \Milton\Crud\Api\Data\ToDoItemInterface;
+use \Magento\Framework\DataObject\IdentityInterface;
+
+
+class ToDoItem extends AbstractModel implements ToDoItemInterface, IdentityInterface
 {
     const CACHE_TAG = 'milton_crud_todoitem';
 

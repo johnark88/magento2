@@ -1,6 +1,11 @@
 <?php
+
+
 namespace Milton\Crud\Block;
-class Main extends \Magento\Framework\View\Element\Template
+
+use \Magento\Framework\View\Element\Template;
+
+class Main extends Template
 {
     function _prepareLayout(){}
 }
