@@ -47,15 +47,15 @@ class Main extends Template
 //        exit;
 
 
-            $todo = $this -> toDoFactory -> create();
-
-            $collection = $todo -> getCollection();
-
-            foreach ($collection as $item)
-            {
-                var_dump('Item ID:  ' . $item -> getId());
-                var_dump($item -> getData());
-            }
-            exit;
+//            $todo = $this -> toDoFactory -> create();
+//
+//            $collection = $todo -> getCollection();
+//
+//            foreach ($collection as $item)
+//            {
+//                var_dump('Item ID:  ' . $item -> getId());
+//                var_dump($item -> getData());
+//            }
+//            exit;
     }
 }//end class
