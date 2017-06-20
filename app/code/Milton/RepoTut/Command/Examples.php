@@ -35,7 +35,6 @@ class Examples extends Command
             -> setValue('WSH11-28%Red')
             -> create();
 
-
         $filter_2 = $this -> objectManager
             ->create('Magento\Framework\Api\FilterBuilder')
             -> setField('sku')
