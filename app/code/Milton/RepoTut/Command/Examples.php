@@ -27,42 +27,41 @@ class Examples extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        //filter
-        $filter_1  = $this -> objectManager
-            ->create('Magento\Framework\Api\FilterBuilder')
-            -> setField('sku')
-            -> setConditionType('like')
-            -> setValue('WSH11-28%Red')
-            -> create();
-
-        $filter_2 = $this -> objectManager
-            ->create('Magento\Framework\Api\FilterBuilder')
-            -> setField('sku')
-            -> setConditionType('like')
-            -> setValue('WSH11-28%Blue')
-            -> create();
-
-
-
-
-        //add filter to group
-        $filter_group_1 = $this -> objectManager
-            -> create('Magento\Framework\Api\Search\FilterGroupBuilder')
-            -> addFilter($filter_1)
-            -> create();
-
-        //add filter to group
-        $filter_group_2 = $this -> objectManager
-            -> create('Magento\Framework\Api\Search\FilterGroupBuilder')
-            -> addFilter($filter_2)
-            -> create();
-
+//        //filter
+//        $filter_1  = $this -> objectManager
+//            ->create('Magento\Framework\Api\FilterBuilder')
+//            -> setField('sku')
+//            -> setConditionType('like')
+//            -> setValue('WSH11-28%Red')
+//            -> create();
+//
+//        $filter_2 = $this -> objectManager
+//            ->create('Magento\Framework\Api\FilterBuilder')
+//            -> setField('sku')
+//            -> setConditionType('like')
+//            -> setValue('WSH11-28%Blue')
+//            -> create();
+//
+//
+//
+//
+//        //add filter to group
+//        $filter_group_1 = $this -> objectManager
+//            -> create('Magento\Framework\Api\Search\FilterGroupBuilder')
+//            -> addFilter($filter_1)
+//            -> create();
+//
+//        //add filter to group
+//        $filter_group_2 = $this -> objectManager
+//            -> create('Magento\Framework\Api\Search\FilterGroupBuilder')
+//            -> addFilter($filter_2)
+//            -> create();
 
 
         //add group to search criteria object
         $search_criteria = $this -> objectManager
             -> create('Magento\Framework\Api\SearchCriteriaBuilder')
-            -> setFilterGroups([$filter_group_1, $filter_group_2])
+            -> addFilter('sku', 'WSH-28%Blue', 'like')
             -> create();
 
         //query the repository for the objects
