@@ -1,0 +1,10 @@
+<?php
+$asset_repository = $this -> assetRepository;
+
+$asset = $asset_repository -> createAsset('Johnarkema_HelloWorldMVVM::test.js');
+
+$url = $asset -> getUrl();
+?>
+
+<script src="<?php echo $url; ?>"></script>
+<!-- Hello There -->

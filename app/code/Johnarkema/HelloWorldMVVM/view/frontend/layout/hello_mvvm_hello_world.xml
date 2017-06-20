@@ -1,6 +1,15 @@
 <?xml version="1.0"?>
 
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Johnarkema_HelloWorldMVVM::test.css" />
+        <link src="Johnarkema_HelloWorldMVVM::test.js" />
+    </head>
+    <referenceBlock name="head.additional">
+        <block template="head.phtml"
+               class="Johnarkema\HelloWorldMVVM\Block\Head"
+               name="johnarkema_helloworld_mvvm_block_head"/>
+    </referenceBlock>
     <referenceContainer name="content">
         <block template="content.phtml"
                class="Johnarkema\HelloWorldMVVM\Block\Main"
