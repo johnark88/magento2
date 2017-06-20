@@ -27,6 +27,15 @@ class Examples extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $output->writeln("Hello World");  
+        $repo = $this -> objectManager -> get('Magento\Catalog\Model\ProductRepository');
+        $search_criteria = $this -> objectManager -> create('Magento\Framework\Api\SearchCriteriaInterface');
+        $result = $repo -> getList($search_criteria);
+        $products = $result -> getItems();
+
+        foreach ($products as $product)
+        {
+                echo $product -> getSku(), "\n";
+        }
+
     }
-} 
+} //end class Examples
