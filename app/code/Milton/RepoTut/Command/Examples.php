@@ -28,17 +28,29 @@ class Examples extends Command
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         //filter
-        $filter = $this -> objectManager
+        $filter_1  = $this -> objectManager
             ->create('Magento\Framework\Api\FilterBuilder')
             -> setField('sku')
             -> setConditionType('like')
-            -> setValue('WSH11%')
+            -> setValue('WSH11-28%Red')
             -> create();
+
+
+        $filter_2 = $this -> objectManager
+            ->create('Magento\Framework\Api\FilterBuilder')
+            -> setField('sku')
+            -> setConditionType('like')
+            -> setValue('WSH11-28%Blue')
+            -> create();
+
+
+
 
         //add filter to group
         $filter_group = $this -> objectManager
             -> create('Magento\Framework\Api\Search\FilterGroupBuilder')
-            -> addFilter($filter)
+            -> addFilter($filter_1)
+            -> addFilter($filter_2)
             -> create();
 
 
