@@ -27,8 +27,29 @@ class Examples extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
+        //filter
+        $filter = $this -> objectManager
+            ->create('Magento\Framework\Api\FilterBuilder')
+            -> setField('sku')
+            -> setConditionType('like')
+            -> setValue('WSH11%')
+            -> create();
+
+        //add filter to group
+        $filter_group = $this -> objectManager
+            -> create('Magento\Framework\Api\Search\FilterGroupBuilder')
+            -> addFilter($filter)
+            -> create();
+
+
+        //add group to search criteria object
+        $search_criteria = $this -> objectManager
+            -> create('Magento\Framework\Api\SearchCriteriaBuilder')
+            -> setFilterGroups([$filter_group])
+            -> create();
+
+        //query the repository for the objects
         $repo = $this -> objectManager -> get('Magento\Catalog\Model\ProductRepository');
-        $search_criteria = $this -> objectManager -> create('Magento\Framework\Api\SearchCriteriaInterface');
         $result = $repo -> getList($search_criteria);
         $products = $result -> getItems();
 
