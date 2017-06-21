@@ -1,5 +1,4 @@
 <?xml version="1.0"?>
-
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
     <menu>
         <add id="Milton_MenuTut::top_level_example"
@@ -7,7 +6,7 @@
              module="Milton_MenuTut"
              sortOrder="9999"
              resource="Magento_Backend::content"
-             />
+        />
 
 
         <add id="Milton_MenuTut::second_level_example"
@@ -17,7 +16,7 @@
              resource="Magento_Backend::content"
              parent="Milton_MenuTut::top_level_example"
              action="cms/page/index"
-             />
+        />
 
 
         <add id="Milton_MenuTut::third_level_example"
@@ -27,6 +26,17 @@
              resource="Magento_Backend::content"
              parent="Magento_Backend::system"
              action="cms/page/index"
-            />
+        />
+
+    <add id="Milton_MenuTut::a_menu_item"
+         resource="Milton_MenuTut::example_1"
+         title="I am a Link"
+         action="milton_menutut/index/index"
+         module="Milton_MenuTut"
+         sortOrder="9999"
+         parent="Magento_Backend::system_other_settings"
+         dependsOnModule="Magento_Backend"
+    />
+
     </menu>
 </config>
