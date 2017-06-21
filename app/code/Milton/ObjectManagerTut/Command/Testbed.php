@@ -17,7 +17,20 @@ class Testbed extends AbstractCommand
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $output -> writeln("You did it!! YAY!! ");
+        $manager = $this -> getObjectManager();
+        $object = $manager-> get('\Milton\ObjectManagerTut\Model\Example');
+        $object -> message = 'Hello everyone';
+        $output -> writeln($object -> getHelloMessage());
+
+        //will print out the same message'Hello everyone' this displays magentos automatic singleton feature
+        // object can only be instantiated once
+        $object = $manager->get('Milton\ObjectManagerTut\Model\Example');
+        $output -> writeln($object -> getHelloMessage());
+
+        //writes out code from Example.php
+        $object = $manager->create('Milton\ObjectManagerTut\Model\Example');
+        $output -> writeln($object -> getHelloMessage());
+
     }
 
 
