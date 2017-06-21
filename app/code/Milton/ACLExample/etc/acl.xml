@@ -3,8 +3,9 @@
     <acl>
         <resources>
             <resource id="Magento_Backend::admin">
-                <resource id="Milton_ACLExample::top" title="TITLE HERE FOR">
-                    <resource id="Milton_ACLExample::config" title="TITLE HERE FOR"/>
+                <resource id="Milton_ACLExample::top" title="ACL Example Module">
+                    <resource id="Milton_ACLExample::config" title="The First Rule"/>
+                    <resource id="Milton_ACLExample::more_rules" title="The Second Rule"/>
                 </resource>
             </resource>
         </resources>
