@@ -25,7 +25,7 @@
              module="Milton_MenuTut"
              sortOrder="9999"
              resource="Magento_Backend::content"
-             parent="Milton_MenuTut::second_level_example"
+             parent="Magento_Backend::system"
              action="cms/page/index"
             />
     </menu>
