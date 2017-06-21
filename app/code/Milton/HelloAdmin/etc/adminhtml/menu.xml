@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+    <add id="Milton_HelloAdmin::a_menu_item"
+         resource="Milton_HelloAdmin::menu_1"
+         title="Hello Admin Backend"
+         action="milton_hello_admin/index/index"
+         module="Milton_HelloAdmin"
+         sortOrder="1"
+         parent="Magento_Backend::system_other_settings"
+         dependsOnModule="Magento_Backend"/>
+    </menu>
+</config>
