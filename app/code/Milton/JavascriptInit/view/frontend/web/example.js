@@ -1,7 +1,10 @@
 
 
 define([], function(){
-    alert("A simple RequireJS module");
-    return {};
+
+    var mageJsComponent = function() {
+        alert("A simple magento component.");
+    };
+    return mageJsComponent;
 });
 
