@@ -1,9 +1,14 @@
-<h1>Template here. </h1>
+<div id="one" class="foo">
+    Hello World
+</div>
+
+<div id="two" class="foo">
+    Goodbye world
+</div>
 
 
-<script type="text/javascript">
-    requirejs(['Milton_JavascriptInit/example'], function(example){
-        alert('Loaded');
-        console.log(example);
-    });
+<script type="text/x-magento-init">
+    {
+        "*":{ "Milton_JavascriptInit/example" : {}  }
+    }
 </script>
