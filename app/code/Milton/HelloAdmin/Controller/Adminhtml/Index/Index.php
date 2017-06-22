@@ -21,7 +21,10 @@ class Index extends Action
     
     public function execute()
     {
-        return $this->resultPageFactory->create();  
+        $page = $this -> resultPageFactory -> create();
+        $page -> setActiveMenu('Milton_HelloAdmin::a_menu_item');
+        $page -> getConfig() -> getTitle() -> prepend(__('Admin page Title'));
+        return $page;
     }
 
     protected function _isAllowed()
