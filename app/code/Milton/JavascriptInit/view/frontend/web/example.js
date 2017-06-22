@@ -1,10 +1,10 @@
 
 define([], function () {
 
-    var mageJsComponent = function(config)
+    var mageJsComponent = function(config, node)
     {
-        alert("Check out the console");
-        console.log(config);
+        console.log(config)
+        console.log(node);
     };
 
     return mageJsComponent;
