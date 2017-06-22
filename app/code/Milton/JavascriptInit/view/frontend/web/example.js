@@ -1,10 +1,11 @@
 
+define([], function () {
 
-define([], function(){
-
-    var mageJsComponent = function() {
-        alert("A simple magento component.");
+    var mageJsComponent = function(config)
+    {
+        alert("Check out the console");
+        console.log(config);
     };
+
     return mageJsComponent;
 });
-
