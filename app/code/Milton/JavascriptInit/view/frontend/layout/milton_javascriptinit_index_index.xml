@@ -3,12 +3,6 @@
     <head>
         <css src="Milton_JavascriptInit::design.css" />
     </head>
-    <referenceBlock name="head.additional">
-        <block template="head.phtml"
-               class="Milton\JavascriptInit\Block\Head"
-                name="milton_javascriptinit_block_head"  />
-    </referenceBlock>
-
 <referenceBlock name="content">
     <block template="content.phtml"
            class="Milton\JavascriptInit\Block\Main"
