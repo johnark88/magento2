@@ -1,0 +1,12 @@
+<?php
+
+    $asset_Repo = $this -> $assetRepo;
+
+    $asset = $asset_repository -> createAsset('Milton_JavascriptInit::design.css');
+
+    $url = $asset -> getUrl();
+
+    ?>
+
+<!-- Hello There -->
+<script src="<?php echo $url; ?>"></script>

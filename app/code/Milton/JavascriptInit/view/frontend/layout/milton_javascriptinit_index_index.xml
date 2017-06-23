@@ -1,8 +1,17 @@
 <?xml version="1.0"?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Milton_JavascriptInit::design.css" />
+    </head>
+    <referenceBlock name="head.additional">
+        <block template="head.phtml"
+               class="Milton\JavascriptInit\Block\Head"
+                name="milton_javascriptinit_block_head"  />
+    </referenceBlock>
+
 <referenceBlock name="content">
     <block template="content.phtml"
            class="Milton\JavascriptInit\Block\Main"
-           name="milton_javascriptinit_block_main"/>
+           name="milton_javascriptinit_block_main"  />
 </referenceBlock>
 </page>
